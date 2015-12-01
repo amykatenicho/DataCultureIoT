@@ -195,7 +195,7 @@ Now that the device is configured, you will see how to create an application to 
 ###Read FEZ HAT sensors###
 In order to get the information out of the hat sensors, you will take advantage of the [Developers' Guide](https://www.ghielectronics.com/docs/329/fez-hat-developers-guide "GHI Electronics FEZ HAT Developer's Guide") that [GHI Electronics](https://www.ghielectronics.com/ "GHI Electronics")  published.
 
-1. Download the [zipped repository](https://bitbucket.org/ghi_elect/windows-iot/get/183b64180b7c.zip "Download FEZ HAT Developers' Guide repository"), extract the files in your file system and locate the _GHIElectronics.UAP.sln_ solution file (You must have **Visual Studio** installed in order to open the solution).
+1. Download the [zipped repository](https://bitbucket.org/ghi_elect/windows-iot/get/183b64180b7c.zip "Download FEZ HAT Developers' Guide repository"), extract the files in your file system or navigate to GHI folder within this GitHub repo. Then locate the _GHIElectronics.UAP.sln_ solution file (You must have **Visual Studio** installed in order to open the solution).
 
 2. After opening the solution you will see several projects. The _Developers's Guide_ comes with examples of many of the shields provided by the company. Right-click the one named _GHIElectronics.UAP.Examples.FEZHAT_, and select **Set as Startup Project**.
 
@@ -286,7 +286,7 @@ In order to get the information out of the hat sensors, you will take advantage 
 
 Now that you know how to read the FEZ HAT sensors, you will send that information to an Azure Event Hub. To do that, you will use an existing [ConnectTheDots](https://github.com/Azure/connectthedots "Connect the Dots website") example which shows how to connect a Windows 10 IoT core device to Azure and send sensor information.
 
-1. [Download](https://github.com/Azure/connectthedots/archive/master.zip "Download the ConnectTheDots repository") (or clone) this repository and extract the files to a folder in your file system. Open the solution located in the **DataCultureIoT\Code\WindowsIoTCorePi2FezHat\Begin** folder.
+1. Clone this repository and extract the files to a folder in your file system. Open the solution located in the **DataCultureIoT\Code\WindowsIoTCorePi2FezHat\Begin** folder.
 
 
 2. Before running the application, you must set the **Azure Event Hub** connection information. In order to allow the application to send data to the **Event Hub**, the following information must be provided:
