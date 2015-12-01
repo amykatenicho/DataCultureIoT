@@ -27,7 +27,7 @@ This lab includes the following tasks:
 
 <a name="Task1" />
 ##Setup##
-The following sections are intended to setup your environment to be able to create and run your solutions with Windows 10 IoT Core.
+The following sections are intended to setup your environment to be able to create and run your solutions with Windows 10 IoT Core. An email was sent prior to Data Culture Technical Day with the instructions below.
 
 <a name="Task11" />
 ###Setting up your Software###
@@ -67,13 +67,13 @@ To setup your devices perform the following steps:
 
 2. Get a Windows 10 IoT Core SD Card or download the **Windows 10 IoT Core** image as per the instructions on <https://ms-iot.github.io/content/en-US/win10/SetupRPI.htm>, be sure to follow the steps to mount the image, and run the installer on your development PC. If you already have the OS image on a card, you still need to follow this step to get the IoT Core Watcher and Visual Studio templates on to your PC.
 
-3. Once you have the image on the card, insert the micro SD card in the Raspberry Pi device.
+3. Once you have the image on the card, insert the micro SD card in the Raspberry Pi device. (SD card will already be imaged in the Data Culture Labs)
 
-5. Connect the Raspberry Pi to a power supply, optionally a keyboard, mouse and monitor, and use the Ethernet cable to connect your device and your development PC. You can do it by plugging in one end of the spare Ethernet cable to the extra Ethernet port on your PC, and the other end of the cable to the Ethernet port on your IoT Core device. (Do this using an on-board port or an auto-crossover USB->Ethernet interface.)
+5. Connect the Raspberry Pi to a power supply [optionally a keyboard, mouse and monitor] and use the Ethernet cable to connect your device and your development PC. You can do it by plugging in one end of the spare Ethernet cable to the extra Ethernet port on your PC, and the other end of the cable to the Ethernet port on your IoT Core device. (Do this using an on-board port or an auto-crossover USB->Ethernet interface.)
 
 6. Wait for the OS to boot.
 
-7. Run the **Windows 10 IoT Core Watcher** utility (installed in step 2) in your development PC and copy your Raspberry Pi IP address by right-clicking on the detected device and selecting **Copy IP Address**.
+7. Run the **Windows 10 IoT Core Watcher** utility (installed in step 2) in your development PC and copy your Raspberry Pi IP address by right-clicking on the detected device and selecting **Copy IP Address**. (Download tool from here: http://go.microsoft.com/fwlink/?LinkId=619755)
 
 	![windows-iot-core-watcher](Images/windows-iot-core-watcher.png?raw=true)
 
@@ -118,6 +118,7 @@ To setup your devices perform the following steps:
 You can also rename the device by using the web server, but certain functions are available only through PowerShell. Now that you understand how to connect through PowerShell, we'll use the web server to set up WiFi.
 
 ####Using WiFi on your Device ####
+We will not provide compatible Wi-Fi dongles in the Data Culture Technical IoT Track labs, however feel free to refer back to these resources when out of the lab enviroment
 
 1. To configure your device, run the **Windows 10 IoT Core Watcher** utility in your development PC and open the [web-based management](https://ms-iot.github.io/content/en-US/win10/tools/Webb.htm) application by right-clicking the detected device and selecting **Web Browser Here**.
 
@@ -285,9 +286,8 @@ In order to get the information out of the hat sensors, you will take advantage 
 
 Now that you know how to read the FEZ HAT sensors, you will send that information to an Azure Event Hub. To do that, you will use an existing [ConnectTheDots](https://github.com/Azure/connectthedots "Connect the Dots website") example which shows how to connect a Windows 10 IoT core device to Azure and send sensor information.
 
-1. [Download](https://github.com/Azure/connectthedots/archive/master.zip "Download the ConnectTheDots repository") (or clone) the **ConnectTheDots** repository and extract the files to a folder in your file system. Open the solution located in the **\Devices\DirectlyConnectedDevices\WindowsIoTCorePi2** folder.
+1. [Download](https://github.com/Azure/connectthedots/archive/master.zip "Download the ConnectTheDots repository") (or clone) this repository and extract the files to a folder in your file system. Open the solution located in the **DataCultureIoT\Code\WindowsIoTCorePi2FezHat\Begin** folder.
 
-	> **Note:** Depending on the **Visual Studio** version that you are using, it is possible that the project needs to be updated - since the sample app was built using the Visual Studio 2015 Release Candidate (RC) which format is not compatible with the VS 2015 RTM. An already updated version can be found in the **WindowsIoTCorePi2FezHat\Code\Begin**
 
 2. Before running the application, you must set the **Azure Event Hub** connection information. In order to allow the application to send data to the **Event Hub**, the following information must be provided:
 
@@ -971,8 +971,8 @@ Once the job starts it creates the Power BI datasource associated with the given
 <a name="Task33" />
 ###Consuming the Event Hub data from a Website###
 	
-1. Download the Website project located [here](https://github.com/southworkscom/connectthedots/tree/master/Azure/WebSite).
-2. Browse to the **Assets** folder and copy the _Web.config_ file inside the **ConnectTheDotsWebSite** folder of the Website.
+1. Locate the WebSite folder in this GitHub repo and download.
+2. Find the **Assets** folder and copy the _Web.config_ file to inside the **ConnectTheDotsWebSite** folder of the Website.
 
 	![Copying the web config to the website solution](Images/copying-the-web-config-to-the-website-solutio.png?raw=true)
 
