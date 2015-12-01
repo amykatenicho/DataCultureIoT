@@ -1,0 +1,1 @@
+C:\Users\amynic\Documents\connectthedots-IoT-Field-Labs\connectthedots-IoT-Field-Labs\Devices\DirectlyConnectedDevices\WindowsIoTCorePi2FezHat\Code\EventHubReader\EventHubReader\bin\Debug\EventHubReader.exe.config
